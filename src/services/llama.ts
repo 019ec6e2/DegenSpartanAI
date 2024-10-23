@@ -395,7 +395,7 @@ class LlamaService {
 
     const embeddingContext = await this.model.createEmbeddingContext();
     const embedding = await embeddingContext.getEmbeddingFor(input);
-    return embedding?.vector;
+    return embedding?.vector.slice();
   }
 }
 
